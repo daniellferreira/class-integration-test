@@ -3,7 +3,7 @@ const { app, users } = require('../src/1-users/app');
 
 describe('API de usuários', () => {
     beforeEach(() => {
-        users.length = 0; // Limpa o array de usuários antes de cada teste
+        users.length = 0; 
     });
 
     it('deve adicionar um novo usuário com sucesso', async () => {

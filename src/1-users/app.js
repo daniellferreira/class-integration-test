@@ -8,7 +8,7 @@ let users = [];
 app.post('/users', (req, res) => {
     const user = req.body;
     if (!user.name || !user.email) {
-        return res.status(400).json({ error: 'Name and email are required' });
+        return res.status(400).json({ error: 'Name and email are required'});
     }
     user.id = users.length + 1;
     users.push(user);
@@ -18,5 +18,7 @@ app.post('/users', (req, res) => {
 app.get('/users', (req, res) => {
     res.json(users);
 });
+module.exports = { app, users};
 
 module.exports = { app, users };
+
